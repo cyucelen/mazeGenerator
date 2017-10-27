@@ -2,7 +2,7 @@
 mazeGenerator uses ncurses library to render characters on terminal screen and uses Recursive Backtracker algorithm to generate the Maze.
 
 ### Changing the Grid Size
-You can change the size of the maze by changing GRIDWITH and GRIDHEIGHT variables in global.cpp file and compile. (Default 20x20)
+You can change the size of the maze by changing GRIDWIDTH and GRIDHEIGHT variables in global.cpp file and compile. (Default 20x20)
 
 ### Installing Dependency for Compile this project
 
