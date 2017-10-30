@@ -13,10 +13,10 @@ void setup() {
     std::cout << "Setup Started.." << std::endl;
     initscr();
     cbreak();
-    win = newwin(40, 80, 0, 0);
+    win = newwin(GRIDHEIGHT + 1, GRIDWIDTH * 2 + 10, 0, 0);
     for(int j = 0; j < GRIDHEIGHT; j++){
         for(int i = 0; i < GRIDWIDTH; i++){
-            Cell *temp = new Cell(i,j);
+            Cell *temp = new Cell(i, j);
             GRID.push_back(temp);
         }
     }
@@ -39,7 +39,7 @@ void draw() {
         }else if(CELLSTACK.size() == 0){
             break;
         }
-        usleep(50000);
+        usleep(DELAY);
         werase(win);
         for(int i = 0; i < GRID.size(); i++){
             GRID[i]->show();

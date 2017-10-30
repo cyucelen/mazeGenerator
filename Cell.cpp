@@ -25,39 +25,24 @@ void Cell::print() {
 }
 
 void Cell::removeWalls(Cell &next) {
-    int x = i - next.geti();
-    int y = j - next.getj();
+    int x = i - next.i;
+    int y = j - next.j;
 
     if(x == 1){
         walls[3] = false;
-        next.setRightWall(false);
+        next.walls[1] = false;
     }else if(x == -1){
         walls[1] = false;
-        next.setLeftWall(false);
+        next.walls[3] = false;
     }else if(y == 1){
         walls[0] = false;
-        next.setBottomWall(false);
+        next.walls[2] = false;
     }else if(y == -1){
         walls[2] = false;
-        next.setTopWall(false);
+        next.walls[0] = false;
     }
 }
 
-void Cell::setTopWall(bool b) {
-    walls[0] = b;
-}
-
-void Cell::setRightWall(bool b) {
-    walls[1] = b;
-}
-
-void Cell::setBottomWall(bool b) {
-    walls[2] = b;
-}
-
-void Cell::setLeftWall(bool b) {
-    walls[3] = b;
-}
 
 Cell* Cell::checkNeighbors() {
     std::vector<Cell*> neighbors;
@@ -66,8 +51,6 @@ Cell* Cell::checkNeighbors() {
     int rightIndex  = index(i + 1, j    );
     int bottomIndex = index(i    , j + 1);
     int leftIndex   = index(i - 1, j    );
-
-    //std::cout<< topIndex << " " << rightIndex << " " << bottomIndex << " " << leftIndex;
 
     if(topIndex != -1){
         Cell *top = GRID[topIndex];
@@ -100,8 +83,7 @@ Cell* Cell::checkNeighbors() {
     Cell *c = NULL;
 
     if(neighbors.size() > 0){
-        int r = (rand() % neighbors.size());
-        return neighbors.at(r);
+        return neighbors.at(rand() % neighbors.size());
     }else{
         return c;
     }
@@ -126,23 +108,8 @@ void Cell::show() {
         wmove(win, j + 1, (i + 1) + (i));
         wvline(win, '|', 1);
     }
-    // i + 2 + (i) next
-    // j + 1 next
+
     wmove(win, (Current->j) + 1, ((Current ->i) + 2) + (Current->i));
     refresh();
     wrefresh(win);
-
  }
-
-int Cell::geti() {
-    return i;
-}
-
-int Cell::getj(){
-    return j;
-};
-
-bool Cell::isVisited() {
-    return visited;
-}
-

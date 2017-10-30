@@ -14,13 +14,6 @@ public:
     void show();
     void removeWalls(Cell&);
 
-    int geti();
-    int getj();
-    bool isVisited();
     void setWalls();
     void setVisited(bool);
-    void setTopWall(bool);
-    void setRightWall(bool);
-    void setBottomWall(bool);
-    void setLeftWall(bool);
 };
