@@ -22,18 +22,16 @@ void getConfig() {
             int signPos;
             if(strInput.find("WIDTH") != std::string::npos){
                 signPos = (int) strInput.find("=");
-                GRIDWIDTH = stoi(strInput.substr(signPos + 1));
+                GRIDWIDTH = std::stoi(strInput.substr(signPos + 1));
             }else if(strInput.find("HEIGHT") != std::string::npos){
                 signPos = (int) strInput.find("=");
-                GRIDHEIGHT =  stoi(strInput.substr(signPos + 1));
+                GRIDHEIGHT =  std::stoi(strInput.substr(signPos + 1));
             }else if(strInput.find("DELAY") != std::string::npos){
                 signPos = (int) strInput.find("=");
-                DELAY = stoi(strInput.substr(signPos + 1));
+                DELAY = std::stoi(strInput.substr(signPos + 1));
             }
         }
     }
-
-
 }
 
 Cell* Current;

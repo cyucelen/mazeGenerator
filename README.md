@@ -13,7 +13,7 @@ If you want to compile this project, you should first install ncurses library by
 
 Use -lncurses flag for compiling this project.
 ##### Example : 
-`g++ global.cpp Cell.cpp main.cpp -o mazeGenerator -lncurses`
+`g++ -std=c++11 global.cpp Cell.cpp main.cpp -o mazeGenerator -lncurses`
 
 ### Running
 
