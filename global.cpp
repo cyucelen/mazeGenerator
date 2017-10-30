@@ -19,8 +19,7 @@ void getConfig() {
         while(conf){
             std::string strInput;
             getline(conf, strInput);
-            int signPos, value;
-            std::cout << "!!!" << strInput << std::endl;
+            int signPos;
             if(strInput.find("WIDTH") != std::string::npos){
                 signPos = (int) strInput.find("=");
                 GRIDWIDTH = stoi(strInput.substr(signPos + 1));
