@@ -49,6 +49,7 @@ void draw() {
 
 int main() {
     std::cout << "Main started.." << std::endl;
+    getConfig();
     srand(time(NULL));
     setup();
     draw();

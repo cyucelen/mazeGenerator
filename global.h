@@ -16,3 +16,4 @@ extern WINDOW *win;
 extern std::stack<Cell*> CELLSTACK;
 
 extern int index(int,int);
+extern void getConfig();
