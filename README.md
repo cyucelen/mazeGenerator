@@ -2,7 +2,7 @@
 mazeGenerator uses ncurses library to render characters on terminal screen and uses Recursive Backtracker algorithm to generate the Maze.
 
 ### Changing the Grid Size
-You can change the size of the maze by changing GRIDWIDTH and GRIDHEIGHT values in config.txt file. You can also change the speed of the rendering by the changing DELAY value in config.txt file.
+You can change the size of the maze by changing WIDTH and HEIGHT values in config.txt file. You can also change the speed of the rendering by the changing DELAY value in config.txt file.
 
 ### Installing Dependency to Compile this project
 
