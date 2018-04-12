@@ -7,9 +7,9 @@ You can change the size of the maze by changing WIDTH and HEIGHT values in confi
 ### Installing Dependency to Compile this project
 
 If you want to compile this project, you should first install ncurses library by using this command: <br />
-Ubuntu
+Ubuntu <br />
 `sudo apt-get install libncurses5-dev libncursesw5-dev`
-Arch Linux
+Arch Linux <br />
 `sudo pacman -S ncurses`
 
 ### Compiling
