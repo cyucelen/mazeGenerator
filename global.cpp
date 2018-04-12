@@ -10,7 +10,7 @@ int GRIDHEIGHT = 20;
 int DELAY = 50000;
 
 void getConfig() {
-    std::ifstream conf("../config.txt");
+    std::ifstream conf("config.txt");
 
     if(!conf) {
         std::cerr << "Config file could not found!" << std::endl;

@@ -7,14 +7,14 @@ You can change the size of the maze by changing WIDTH and HEIGHT values in confi
 ### Installing Dependency to Compile this project
 
 If you want to compile this project, you should first install ncurses library by using this command: <br />
+Ubuntu
 `sudo apt-get install libncurses5-dev libncursesw5-dev`
+Arch Linux
+`sudo pacman -S ncurses`
 
 ### Compiling
 
-Use -lncurses flag for compiling this project.
-##### Example : 
-`g++ -std=c++11 global.cpp Cell.cpp main.cpp -o mazeGenerator -lncurses`
-
+`make` or `make build`
 ### Running
 
 To run the mazeGenerator : <br />
