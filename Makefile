@@ -1,2 +1,2 @@
 build:
-	g++ -std=c++11 global.cpp Cell.cpp main.cpp -o mazeGenerator -lncurses
+	g++ -std=c++11 src/* -o mazeGenerator -lncurses
