@@ -1,6 +1,6 @@
 # mazeGenerator
 
-[![asciicast](https://asciinema.org/a/dJ2KQ7d55HLIJ8sjtyc3KI9La.svg)](https://asciinema.org/a/dJ2KQ7d55HLIJ8sjtyc3KI9La)
+![](maze.gif)
 
 mazeGenerator uses ncurses library to render characters on terminal screen and uses Recursive Backtracker algorithm to generate the Maze. It demonstrates each step, so you can watch and see how it generates the maze!
 
