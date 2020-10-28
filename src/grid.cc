@@ -49,9 +49,9 @@ void Grid::render() {
     c.show(window);
     wmove(window, (current->getRow()) + 1,
           ((current->getColumn()) + 2) + (current->getColumn()));
-    refresh();
-    wrefresh(window);
   }
+  refresh();
+  wrefresh(window);
 }
 
 Cell *Grid::findNextCell() {
