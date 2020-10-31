@@ -9,7 +9,7 @@ Grid::Grid(int width, int height, int renderDelay) {
   this->width = width;
   this->height = height;
   this->renderDelay = renderDelay;
-  window = newwin(width * 2 + 10, height * 2 + 10, 0, 0);
+  window = newwin(height * 2 + 10, width * 2 + 10, 0, 0);
   createCells();
   current = &cells[0];
 }
@@ -49,9 +49,9 @@ void Grid::render() {
     c.show(window);
     wmove(window, (current->getRow()) + 1,
           ((current->getColumn()) + 2) + (current->getColumn()));
-    refresh();
-    wrefresh(window);
   }
+  refresh();
+  wrefresh(window);
 }
 
 Cell *Grid::findNextCell() {
