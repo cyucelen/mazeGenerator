@@ -9,7 +9,7 @@ Grid::Grid(int width, int height, int renderDelay) {
   this->width = width;
   this->height = height;
   this->renderDelay = renderDelay;
-  window = newwin(width * 2 + 10, height * 2 + 10, 0, 0);
+  window = newwin(height * 2 + 10, width * 2 + 10, 0, 0);
   createCells();
   current = &cells[0];
 }
