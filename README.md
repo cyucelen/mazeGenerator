@@ -29,4 +29,9 @@ If you want to compile this project, you should first install ncurses library by
 To run the mazeGenerator : <br />
 `./mazeGenerator`
 
+### Installing with snap
+
+Snap command : <br />
+`sudo snap install mazegen --beta`
+
 ##### HAVE FUN!
